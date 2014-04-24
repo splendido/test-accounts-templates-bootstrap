@@ -3,26 +3,18 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "accounts-linkedin": {},
       "less-bootstrap-3": {},
       "less-fontawesome-4": {},
-      "accounts-users-core": {
-        "path": "../accounts-users-core"
-      },
       "accounts-users-bootstrap": {
         "path": "../accounts-users-bootstrap"
-      }
+      },
+      "accounts-linkedin": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
-      },
-      "accounts-linkedin": {
-        "git": "https://github.com/yefim/meteor-accounts-linkedin.git",
-        "tag": "v0.0.5",
-        "commit": "0ccf12b93f5cd6f487caa68a12a640099e358ffd"
       },
       "less-bootstrap-3": {
         "git": "https://github.com/DerMambo/less-bootstrap-3.git",
@@ -34,16 +26,21 @@
         "tag": "v0.0.1",
         "commit": "f40d8d5e0794325aedddd4aeedd1e9cfb47ca133"
       },
-      "accounts-users-core": {
-        "path": "../accounts-users-core"
-      },
       "accounts-users-bootstrap": {
         "path": "../accounts-users-bootstrap"
+      },
+      "accounts-linkedin": {
+        "git": "https://github.com/yefim/meteor-accounts-linkedin.git",
+        "tag": "v0.0.5",
+        "commit": "0ccf12b93f5cd6f487caa68a12a640099e358ffd"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "accounts-users-core": {
+        "path": "../accounts-users-core"
       },
       "linkedin": {
         "git": "https://github.com/yefim/meteor-linkedin.git",

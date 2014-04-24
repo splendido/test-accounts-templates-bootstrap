@@ -6,9 +6,10 @@
 standard-app-packages
 iron-router
 accounts-password
-accounts-google
-accounts-linkedin
 less
 less-bootstrap-3
 less-fontawesome-4
 accounts-users-bootstrap
+accounts-google
+accounts-linkedin
+accounts-twitter

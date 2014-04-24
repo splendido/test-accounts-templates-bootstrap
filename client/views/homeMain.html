@@ -1,3 +1,20 @@
 <template name="homeMain">
-	{{> loginForm}}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="jumbotron">
+            <p>Some content here</p>
+
+            <p>Allowed telephone number formats:</p>
+            <div>(123) 456-7890</div>
+            <div>123-456-7890</div>
+            <div>123.456.7890</div>
+            <div>1234567890</div>
+        </div>
+      </div>
+      <div class="col-md-4 well">
+        {{> loginForm}}
+      </div>
+    </div>
+  </div>
 </template>
