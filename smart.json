@@ -1,0 +1,12 @@
+{
+    "packages": {
+        "iron-router": {},
+        "accounts-linkedin": {},
+        "less-bootstrap-3": {},
+        "less-fontawesome-4": {},
+        "accounts-users-bootstrap": {
+            //"path": "/home/idel/Projects/Accounts-Users/accounts-users-bootstrap"
+            "git": "https://github.com/splendido/accounts-users-bootstrap.git"
+        }
+    }
+}
