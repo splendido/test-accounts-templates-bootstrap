@@ -20,23 +20,13 @@ Router.map(function() {
     this.route('home', {
         path: '/',
         template: 'homeMain',
+        onBeforeAction: function(){setActiveLinks();}
     });
 
-    this.route('exposList', {
-        path: '/expos',
-        controller: 'ExposListController'
+    this.route('fullPage', {
+        path: '/full',
+        template: 'fullPage',
+        onBeforeAction: function(){setActiveLinks();}
     });
-
-    this.route('exposNextList', {
-        path: '/nextexpos',
-        controller: 'ExposNextListController'
-    });
-
-    this.route('exposShow', {
-        path: '/expos/:_id',
-        controller: 'ExposShowController'
-    });
-
-//ABEE:ADDROUTE
 
 });

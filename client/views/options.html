@@ -1,0 +1,54 @@
+<template name="options">
+  <div>
+    <h2>Lets play with the configuration options!</h2>
+    <div class="alert alert-warning">Note: only for this demo, I've allowed clien-side update of the configuration object!</div>
+    <form role="form" class="well">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="showPlaceholders" value="" checked="true">
+          Show Placeholders
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="displayFormLabels" value="" checked="true">
+          Display Form Labels
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="continuousValidation" value="" checked="true">
+          Continuous Validation
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="formValidationFeedback" value="" checked="true">
+          Form Validation Feedback
+        </label>
+      </div>
+    </form>
+    <div class="alert alert-warning">
+      Note: having feedback without labels shows some problems with icon vertical alignment (seems a bug in v3.1, see
+      <a href="https://github.com/twbs/bootstrap/issues/12873">here</a>)
+    </div>
+  </div>
+
+  {{#if signup}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Validation Information</h3>
+      </div>
+      <div class="panel-body">
+        <p>Allowed telephone number formats:</p>
+        <ul>
+          <li>(123) 456-7890</li>
+          <li>123-456-7890</li>
+          <li>123.456.7890</li>
+          <li>1234567890</li>
+        </ul>
+      </div>
+    </div>
+  {{/if}}
+
+</template>

@@ -5,8 +5,8 @@
       "iron-router": {},
       "less-bootstrap-3": {},
       "less-fontawesome-4": {},
-      "accounts-users-bootstrap": {
-        "path": "../accounts-users-bootstrap"
+      "accounts-templates-bootstrap": {
+        "path": "../accounts-templates-bootstrap"
       },
       "accounts-linkedin": {}
     },
@@ -26,8 +26,8 @@
         "tag": "v0.0.1",
         "commit": "f40d8d5e0794325aedddd4aeedd1e9cfb47ca133"
       },
-      "accounts-users-bootstrap": {
-        "path": "../accounts-users-bootstrap"
+      "accounts-templates-bootstrap": {
+        "path": "../accounts-templates-bootstrap"
       },
       "accounts-linkedin": {
         "git": "https://github.com/yefim/meteor-accounts-linkedin.git",
@@ -39,8 +39,8 @@
         "tag": "v0.2.4",
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
-      "accounts-users-core": {
-        "path": "../accounts-users-core"
+      "accounts-templates-core": {
+        "path": "../accounts-templates-core"
       },
       "linkedin": {
         "git": "https://github.com/yefim/meteor-linkedin.git",

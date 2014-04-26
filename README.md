@@ -1,4 +1,4 @@
-Meteor test application for package `accounts-users-bootstrap`
-==============================================================
+Meteor test application for package `accounts-templates-bootstrap`
+==================================================================
 
 Warning WIP!!!

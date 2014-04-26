@@ -1,4 +1,4 @@
 
-console.log('Initializing AccountsUsers...');
-AccountsUsers.init();
+console.log('Initializing AccountsTemplates...');
+AccountsTemplates.init();
 console.log('Done!');

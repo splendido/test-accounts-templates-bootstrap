@@ -1,18 +1,14 @@
 <template name="homeMain">
   <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="jumbotron">
-            <p>Some content here</p>
+    <div class="page-header">
+      <h1>accounts-templates <small>styled for <a href="http://getbootstrap.com/">Twitter Bootstrap</a></small></h1>
+    </div>
 
-            <p>Allowed telephone number formats:</p>
-            <div>(123) 456-7890</div>
-            <div>123-456-7890</div>
-            <div>123.456.7890</div>
-            <div>1234567890</div>
-        </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        {{> options}}
       </div>
-      <div class="col-md-4 well">
+      <div class="col-sm-12 col-md-4 well">
         {{> loginForm}}
       </div>
     </div>
