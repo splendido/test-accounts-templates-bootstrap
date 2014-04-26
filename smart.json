@@ -4,8 +4,8 @@
     "less-bootstrap-3": {},
     "less-fontawesome-4": {},
     "accounts-templates-bootstrap": {
-      "path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap",
-      "_git": "https://github.com/splendido/accounts-templates-bootstrap.git"
+      "_path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap",
+      "git": "https://github.com/splendido/accounts-templates-bootstrap.git"
     },
     "accounts-linkedin": {}
   }
