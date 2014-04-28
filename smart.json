@@ -1,12 +1,14 @@
 {
-  "packages": {
-    "iron-router": {},
-    "less-bootstrap-3": {},
-    "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": {
-      "_path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap",
-      "git": "https://github.com/splendido/accounts-templates-bootstrap.git"
-    },
-    "accounts-linkedin": {}
-  }
+    "packages": {
+        "iron-router": {},
+        "less-bootstrap-3": {},
+        "less-fontawesome-4": {},
+        "accounts-templates-bootstrap": {
+            "_path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap",
+            "git": "https://github.com/splendido/accounts-templates-bootstrap.git"
+        },
+        "accounts-linkedin": {
+            "git": "https://github.com/splendido/meteor-accounts-linkedin.git"
+        }
+    }
 }

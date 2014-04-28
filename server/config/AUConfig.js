@@ -1,4 +1,3 @@
-console.log('initializing AccountsTemplates....');
 
 AccountsTemplates.removeField('login');
 AccountsTemplates.addField({
@@ -47,7 +46,6 @@ AccountsTemplates.configure({
 
 AccountsTemplates.init();
 
-console.log('Done!');
 
 // --------------------------------------------------------------------------------
 // Only for this demo allows client-side modification of the configuragion document

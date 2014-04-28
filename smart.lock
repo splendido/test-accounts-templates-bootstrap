@@ -6,9 +6,13 @@
       "less-bootstrap-3": {},
       "less-fontawesome-4": {},
       "accounts-templates-bootstrap": {
-        "path": "../accounts-templates-bootstrap"
+        "git": "https://github.com/splendido/accounts-templates-bootstrap.git",
+        "branch": "master"
       },
-      "accounts-linkedin": {}
+      "accounts-linkedin": {
+        "git": "https://github.com/splendido/meteor-accounts-linkedin.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "iron-router": {
@@ -27,12 +31,14 @@
         "commit": "f40d8d5e0794325aedddd4aeedd1e9cfb47ca133"
       },
       "accounts-templates-bootstrap": {
-        "path": "../accounts-templates-bootstrap"
+        "git": "https://github.com/splendido/accounts-templates-bootstrap.git",
+        "branch": "master",
+        "commit": "104546c3835387a145e8f119ba19d92154c7cbb0"
       },
       "accounts-linkedin": {
-        "git": "https://github.com/yefim/meteor-accounts-linkedin.git",
-        "tag": "v0.0.5",
-        "commit": "0ccf12b93f5cd6f487caa68a12a640099e358ffd"
+        "git": "https://github.com/splendido/meteor-accounts-linkedin.git",
+        "branch": "master",
+        "commit": "dd134ff90a8f4afd37bdc83f3df00d3ae28669d6"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
@@ -40,12 +46,19 @@
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "accounts-templates-core": {
-        "path": "../accounts-templates-core"
+        "git": "https://github.com/splendido/accounts-templates-core.git",
+        "branch": "master",
+        "commit": "aaea73b8cb60ec34dfd4007cb58f1d2d0ba7d3a3"
       },
       "linkedin": {
         "git": "https://github.com/yefim/meteor-linkedin.git",
         "tag": "v0.0.2",
         "commit": "c3bac682ea0edd19e58b9172e708f91616888ba0"
+      },
+      "accounts-merge": {
+        "git": "https://github.com/splendido/meteor-accounts-merge.git",
+        "branch": "master",
+        "commit": "1d8d87394b4ee9d5ca2354fdcf08307364137dc9"
       }
     }
   }
