@@ -30,8 +30,8 @@ Meteor.startup(function() {
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "linkedin",
-    "clientId": "77mi5yijey38rf",
-    "secret": "R492z8eBDpW5YaPg"
+    "clientId": "77pa4mwww7hvmw",
+    "secret": "v7fYiQMLUwqGwQTI"
   });
 
 });

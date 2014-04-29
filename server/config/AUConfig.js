@@ -20,7 +20,7 @@ AccountsTemplates.addField({
 });
 
 AccountsTemplates.addField({
-    name: 'full-name',
+    name: 'name',
     displayName: "Full Name (optional)",
     type: 'text',
     minLength: 5,
@@ -33,7 +33,7 @@ AccountsTemplates.addField({
     name: 'phone',
     displayName: "Phone (optional)",
     type: 'tel',
-    re: "^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$",
+    re: "^[(]{0,1}[0-9]{3}[)]{0,1}[-\\s\\.]{0,1}[0-9]{3}[-\\s\\.]{0,1}[0-9]{4}$",
     errStr: 'Invalid Phone number!',
     rowOrder: 3
 });
