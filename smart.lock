@@ -33,7 +33,7 @@
       "accounts-templates-bootstrap": {
         "git": "https://github.com/splendido/accounts-templates-bootstrap.git",
         "branch": "master",
-        "commit": "104546c3835387a145e8f119ba19d92154c7cbb0"
+        "commit": "e2bf609f7a2a5c5759e3443b2b2e864c5097f5d7"
       },
       "accounts-linkedin": {
         "git": "https://github.com/splendido/meteor-accounts-linkedin.git",
@@ -48,7 +48,7 @@
       "accounts-templates-core": {
         "git": "https://github.com/splendido/accounts-templates-core.git",
         "branch": "master",
-        "commit": "aaea73b8cb60ec34dfd4007cb58f1d2d0ba7d3a3"
+        "commit": "fb6d816a2e366999ace0de8dc91072c71258c9e2"
       },
       "linkedin": {
         "git": "https://github.com/yefim/meteor-linkedin.git",
