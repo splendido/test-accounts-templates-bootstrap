@@ -5,25 +5,25 @@
     <form role="form" class="well">
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="showPlaceholders" value="" checked="true">
+          <input type="checkbox" id="showPlaceholders" value="" checked="{{#if showPlaceholders}}true{{/if}}">
           Show Placeholders
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="displayFormLabels" value="" checked="true">
+          <input type="checkbox" id="displayFormLabels" value="" checked="{{#if displayFormLabels}}true{{/if}}">
           Display Form Labels
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="continuousValidation" value="" checked="true">
+          <input type="checkbox" id="continuousValidation" value="" checked="{{#if continuousValidation}}true{{/if}}">
           Continuous Validation
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" id="formValidationFeedback" value="" checked="true">
+          <input type="checkbox" id="formValidationFeedback" value="" checked="{{#if formValidationFeedback}}true{{/if}}">
           Form Validation Feedback
         </label>
       </div>

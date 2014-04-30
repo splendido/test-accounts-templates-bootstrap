@@ -2,6 +2,18 @@ Template.options.helpers({
     signup: function() {
         return AccountsTemplates.getState() === 'sgup';
     },
+    showPlaceholders: function(){
+        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).showPlaceholders;
+    },
+    displayFormLabels: function(){
+        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).displayFormLabels;
+    },
+    continuousValidation: function(){
+        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).continuousValidation;
+    },
+    formValidationFeedback: function(){
+        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).formValidationFeedback;
+    },
 });
 
 Template.options.events({

@@ -53,7 +53,6 @@ AccountsTemplates.init();
 
 ATFieldsCollection.allow({
     update: function(userId, doc, fieldNames, modifier){
-        console.log('AccountsTemplates - Trying to update configuration document!');
         if (doc.name !== 'config' || 'name' in fieldNames)
             return false;
         return true;
