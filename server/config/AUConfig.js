@@ -2,7 +2,8 @@
 AccountsTemplates.removeField('login');
 AccountsTemplates.addField({
     name: 'login',
-    displayName: "Email",
+    displayName: "email",
+    required: true,
     type: 'email',
     re: ".+@(.+){2,}\\.(.+){2,}",
     errStr: 'Invalid email address!!!',
@@ -12,7 +13,8 @@ AccountsTemplates.addField({
 AccountsTemplates.removeField('password');
 AccountsTemplates.addField({
     name: 'password',
-    displayName: "Password",
+    displayName: "password",
+    required: true,
     type: 'password',
     re: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,}",
     errStr: 'at least 1 number, 1 lowercase and 1 uppercase letter, at least 6 characters',
@@ -21,7 +23,7 @@ AccountsTemplates.addField({
 
 AccountsTemplates.addField({
     name: 'name',
-    displayName: "Full Name (optional)",
+    displayName: "Full Name",
     type: 'text',
     minLength: 5,
     maxLength: 30,
@@ -31,7 +33,7 @@ AccountsTemplates.addField({
 
 AccountsTemplates.addField({
     name: 'phone',
-    displayName: "Phone (optional)",
+    displayName: "Phone",
     type: 'tel',
     re: "^[(]{0,1}[0-9]{3}[)]{0,1}[-\\s\\.]{0,1}[0-9]{3}[-\\s\\.]{0,1}[0-9]{4}$",
     errStr: 'Invalid Phone number!',
@@ -57,4 +59,4 @@ ATFieldsCollection.allow({
             return false;
         return true;
     }
-})
+});
