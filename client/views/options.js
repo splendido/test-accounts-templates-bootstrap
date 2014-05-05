@@ -1,72 +1,34 @@
 Template.options.helpers({
+    options: function(){
+        var config = AccountsTemplates._config;
+        var options = [];
+        for (var option in config){
+            if (typeof config[option] === "boolean")
+                options.push(option);
+        }
+        return options;
+    },
     signup: function() {
         return AccountsTemplates.getState() === 'sgup';
     },
-    showPlaceholders: function(){
-        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).showPlaceholders;
-    },
-    displayFormLabels: function(){
-        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).displayFormLabels;
-    },
-    continuousValidation: function(){
-        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).continuousValidation;
-    },
-    formValidationFeedback: function(){
-        return AccountsTemplates.ready() && ATFieldsCollection.findOne({name: 'config'}).formValidationFeedback;
+});
+
+Template.option.helpers({
+    checked: function(){
+        if (AccountsTemplates.ready()){
+            return AccountsTemplates.getConfig(this);
+        }
     },
 });
 
-Template.options.events({
-    'click input#showPlaceholders': function() {
-        var conf = ATFieldsCollection.findOne({
-            name: 'config'
-        });
-        var state = conf.showPlaceholders;
-        ATFieldsCollection.update({
-            _id: conf._id
-        }, {
-            $set: {
-                showPlaceholders: !state
-            }
-        });
-    },
-    'click input#displayFormLabels': function() {
-        var conf = ATFieldsCollection.findOne({
-            name: 'config'
-        });
-        var state = conf.displayFormLabels;
-        ATFieldsCollection.update({
-            _id: conf._id
-        }, {
-            $set: {
-                displayFormLabels: !state
-            }
-        });
-    },
-    'click input#continuousValidation': function() {
-        var conf = ATFieldsCollection.findOne({
-            name: 'config'
-        });
-        var state = conf.continuousValidation;
-        ATFieldsCollection.update({
-            _id: conf._id
-        }, {
-            $set: {
-                continuousValidation: !state
-            }
-        });
-    },
-    'click input#formValidationFeedback': function() {
-        var conf = ATFieldsCollection.findOne({
-            name: 'config'
-        });
-        var state = conf.formValidationFeedback;
-        ATFieldsCollection.update({
-            _id: conf._id
-        }, {
-            $set: {
-                formValidationFeedback: !state
-            }
-        });
-    },
+Template.option.events({
+    'click input': function(event) {
+        if (AccountsTemplates.ready()){
+            var currTarg = event.currentTarget;
+            var option = currTarg.id.slice(7); // Skips 'option-'
+            AccountsTemplates._config[option] = !AccountsTemplates.getConfig(option);
+            $('div.at').remove();
+            UI.insert(UI.render(Template.signinForm), $('#signinFormDiv').get(0));
+        }
+    }
 });

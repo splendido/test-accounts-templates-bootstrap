@@ -1,32 +1,11 @@
 <template name="options">
   <div>
     <h2>Lets play with the configuration options!</h2>
-    <div class="alert alert-warning">Note: only for this demo, I've allowed clien-side update of the configuration object!</div>
+    <div class="alert alert-warning">Note: here I'm playing with UI.render and UI.insert to update the signinForm template when configuration options are modified. Acually there is no reactivity involved and the server-side configuration object remains unchanged!</div>
     <form role="form" class="well">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="showPlaceholders" value="" checked="{{#if showPlaceholders}}true{{/if}}">
-          Show Placeholders
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="displayFormLabels" value="" checked="{{#if displayFormLabels}}true{{/if}}">
-          Display Form Labels
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="continuousValidation" value="" checked="{{#if continuousValidation}}true{{/if}}">
-          Continuous Validation
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="formValidationFeedback" value="" checked="{{#if formValidationFeedback}}true{{/if}}">
-          Form Validation Feedback
-        </label>
-      </div>
+      {{#each options}}
+        {{> option}}
+      {{/each}}
     </form>
     <div class="alert alert-warning">
       Note: having feedback without labels shows some problems with icon vertical alignment (seems a bug in v3.1, see
@@ -55,4 +34,13 @@
     </div>
   {{/if}}
 
+</template>
+
+<template name="option">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="option-{{this}}" value="" checked="{{checked}}">
+      {{this}}
+    </label>
+  </div>
 </template>
