@@ -2,7 +2,9 @@
   "packages": {
     "less-bootstrap-3": {},
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": "0.0.3",
+    "accounts-templates-bootstrap": {
+      "git": "https://github.com/splendido/accounts-templates-bootstrap.git"
+    },
     "accounts-linkedin": {
       "git": "https://github.com/splendido/meteor-accounts-linkedin.git"
     }
