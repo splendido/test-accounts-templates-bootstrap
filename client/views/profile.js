@@ -4,7 +4,8 @@ Template.profile.helpers({
 		return Meteor.user().profile.name;
 	},
 	email: function(){
-		if (Meteor.user().emails[0])
+		var user = Meteor.user();
+		if (user.emails && user.emails[0])
 			return Meteor.user().emails[0].address;
 	},
 	phone: function(){
