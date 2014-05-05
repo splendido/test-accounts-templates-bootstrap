@@ -15,18 +15,34 @@ Router.configure({
     }
 });
 
+
+Router.onRun(function(){setActiveLinks();});
+
 Router.map(function() {
 
     this.route('home', {
         path: '/',
         template: 'homeMain',
-        onBeforeAction: function(){setActiveLinks();}
     });
 
     this.route('fullPage', {
         path: '/full',
         template: 'fullPage',
-        onBeforeAction: function(){setActiveLinks();}
     });
 
+    this.route('aboutPage', {
+        path: '/about',
+        template: 'about',
+    });
+
+    this.route('profilePage', {
+        path: '/profile',
+        template: 'profile',
+    });
+
+    this.route('loginNeeded', {
+        path: '/loginNeeded',
+        template: 'loginNeeded',
+        onBeforeAction: AccountsTemplates.ensureSignedIn,
+    });
 });
