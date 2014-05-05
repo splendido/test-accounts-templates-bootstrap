@@ -1,10 +1,9 @@
-/iron-router
-/blaze-layout
-/accounts-linkedin
-/linkedin
 /less-bootstrap-3
 /less-fontawesome-4
 /accounts-templates-bootstrap
+/accounts-linkedin
 /accounts-templates-core
-/accounts-merge
+/linkedin
 /accounts-t9n
+/iron-router
+/blaze-layout
