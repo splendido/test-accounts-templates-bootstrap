@@ -40,6 +40,7 @@ AccountsTemplates.configure({
     showPlaceholders: true,
     displayFormLabels: true,
     continuousValidation: true,
+    allowAccountsMerging: true,
 
     postSignUpRoutePath: '/profile',
     //signInRoutePath: '/signin',
