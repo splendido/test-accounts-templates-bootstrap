@@ -2,7 +2,7 @@
   "packages": {
     "less-bootstrap-3": {},
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": {},
+    "accounts-templates-bootstrap": "0.0.6",
     "accounts-linkedin": {},
     "fast-render": {}
   }

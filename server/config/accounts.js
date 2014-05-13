@@ -14,7 +14,7 @@ Meteor.startup(function() {
     }]
   });
 
-  /*
+  
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "facebook",
@@ -36,34 +36,6 @@ Meteor.startup(function() {
     "clientId": "77pa4mwww7hvmw",
     "secret": "v7fYiQMLUwqGwQTI"
   });
-  */
-
-  // Local host versions...
-  // Add Facebook configuration entry
-  ServiceConfiguration.configurations.insert({
-    "service": "facebook",
-    "appId": "684907611568574",
-    "secret": "12d420f0dc645f10fd65a53f6e2e49f9"
-  });
-
-  // Add Google configuration entry
-  ServiceConfiguration.configurations.insert({
-    "service": "google",
-    "clientId": "755514649356-r82bvrffrlfo4ndu5bqnd41jjoo66k8e.apps.googleusercontent.com",
-    "client_email": "755514649356-r82bvrffrlfo4ndu5bqnd41jjoo66k8e@developer.gserviceaccount.com",
-    "secret": "pRaKBHbRbLbA4GoiiRd-r1jj"
-  });
-
-  // Add Facebook configuration entry
-  ServiceConfiguration.configurations.insert({
-    "service": "linkedin",
-    "clientId": "77epi2jitxjgus",
-    "secret": "lmHaFUApnO3gkxkm"
-  });
-
-
-
-  Accounts.emailTemplates.siteName = "Kighe";
-  Accounts.emailTemplates.from = "Support <support@kighe.com>";
+  
 });
 
