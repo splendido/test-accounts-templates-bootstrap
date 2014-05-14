@@ -23,11 +23,17 @@ Router.map(function() {
     this.route('home', {
         path: '/',
         template: 'homeMain',
+        onBeforeAction: function(){
+            AccountsTemplates.setState('sgin');
+        }
     });
 
     this.route('fullPage', {
         path: '/full',
         template: 'fullPage',
+        onBeforeAction: function(){
+            AccountsTemplates.setState('sgin');
+        }
     });
 
     this.route('aboutPage', {
