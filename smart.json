@@ -2,12 +2,10 @@
   "packages": {
     "less-bootstrap-3": {},
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": {},
-    "accounts-linkedin": {},
-    "accounts-merge": {
-      "path": "/home/idel/Projects/AccountsTemplates/accounts-merge",
-      "_git": "https://github.com/splendido/meteor-accounts-merge.git"
+    "accounts-templates-bootstrap": {
+      "path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap"
     },
+    "accounts-linkedin": {},
     "fast-render": {}
   }
 }
