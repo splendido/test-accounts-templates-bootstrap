@@ -1,3 +1,4 @@
+//Accounts.config({forbidClientAccountCreation: true});
 
 AccountsTemplates.removeField('login');
 AccountsTemplates.addField({
@@ -40,12 +41,14 @@ AccountsTemplates.configure({
     showPlaceholders: true,
     displayFormLabels: true,
     continuousValidation: true,
-    allowAccountsMerging: true,
+    showAddRemoveServices: true,
 
     postSignUpRoutePath: '/profile',
-    //signInRoutePath: '/signin',
-    //signUpRoutePath: '/signup',
-    //forgotPwdRoutePath: '/forgotpassword',
+    signInRoutePath: '/signin',
+    signInRouteName: 'signin',
+    signUpRoutePath: '/signup',
+    signUpRouteName: 'signup',
+    forgotPwdRoutePath: '/forgotpassword',
 });
 
 AccountsTemplates.init();
