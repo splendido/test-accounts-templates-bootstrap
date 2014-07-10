@@ -9,6 +9,6 @@ accounts-linkedin
 accounts-password
 accounts-templates-bootstrap
 less
-less-bootstrap-3
 less-fontawesome-4
 standard-app-packages
+bootstrap3-less
