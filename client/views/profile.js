@@ -1,7 +1,10 @@
 
 Template.profile.helpers({
 	name: function(){
-		return Meteor.user().profile.name;
+		var user = Meteor.user();
+		if (user && user.profile)
+			return user.profile.name;
+		return '';
 	},
 	email: function(){
 		var user = Meteor.user();
@@ -9,6 +12,9 @@ Template.profile.helpers({
 			return Meteor.user().emails[0].address;
 	},
 	phone: function(){
-		return Meteor.user().profile.phone;
+		var user = Meteor.user();
+		if (user && user.profile)
+			return Meteor.user().profile.phone;
+		return '';
 	},
 });

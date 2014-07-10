@@ -1,9 +1,8 @@
 {
   "packages": {
-    "less-bootstrap-3": {},
+    "bootstrap3-less": {},
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": "",
-    "accounts-linkedin": {},
-    "fast-render": {}
+    "accounts-templates-bootstrap": {},
+    "accounts-linkedin": {}
   }
 }

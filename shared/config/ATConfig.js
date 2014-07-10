@@ -1,3 +1,21 @@
+/*
+AccountsTemplates.removeField('email');
+AccountsTemplates.addField({
+    name: "username",
+    type: "text",
+    displayName: "Username",
+    required: true,
+});
+
+AccountsTemplates.addField({
+    name: 'email',
+    type: 'email',
+    required: false,
+    displayName: "email",
+    re: /.+@(.+){2,}\.(.+){2,}/,
+    errStr: 'error.accounts.Invalid email',
+});
+*/
 
 AccountsTemplates.removeField('login');
 AccountsTemplates.addField({
@@ -6,7 +24,7 @@ AccountsTemplates.addField({
     required: true,
     displayName: "email",
     re: /.+@(.+){2,}\.(.+){2,}/,
-    errStr: 'Invalid email address!!!',
+    errStr: 'error.accounts.Invalid email',
 });
 
 AccountsTemplates.removeField('password');
@@ -40,12 +58,15 @@ AccountsTemplates.configure({
     showPlaceholders: true,
     displayFormLabels: true,
     continuousValidation: true,
-    //allowAccountsMerging: true,
+    showAddRemoveServices: true,
 
     postSignUpRoutePath: '/profile',
+    //postSignInRoutePath: '/about',
     //signInRoutePath: '/signin',
+    //signInRouteName: 'signin',
     //signUpRoutePath: '/signup',
-    //forgotPwdRoutePath: '/forgotpassword',
+    //signUpRouteName: 'signup',
+    forgotPwdRoutePath: '/forgotpassword',
 });
 
 AccountsTemplates.init();
