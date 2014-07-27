@@ -1,8 +1,10 @@
 {
   "packages": {
-    "bootstrap3-less": {},
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": {},
-    "accounts-linkedin": {}
+    "accounts-templates-bootstrap": {
+      "path": "/home/idel/Projects/AccountsTemplates/accounts-templates-bootstrap"
+    },
+    "accounts-linkedin": {},
+    "bootstrap3-less": {}
   }
 }

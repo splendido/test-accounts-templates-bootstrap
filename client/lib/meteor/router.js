@@ -1,11 +1,7 @@
 Router.configure({
     notFoundTemplate: 'pageNotFound',
     layoutTemplate: 'masterLayout',
-    loadingTemplate: 'loading',
     yieldTemplates: {
-        aside: {
-            to: 'aside'
-        },
         nav: {
             to: 'nav'
         },
@@ -49,6 +45,6 @@ Router.map(function() {
     this.route('loginNeeded', {
         path: '/loginNeeded',
         template: 'loginNeeded',
-        onBeforeAction: AccountsTemplates.ensureSignedIn,
+        onBeforeAction: [AccountsTemplates.ensureSignedIn],
     });
 });

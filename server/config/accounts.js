@@ -2,19 +2,21 @@
 
 // Set up login services
 Meteor.startup(function() {
-
   // Remove configuration entries in case service is already configured
   ServiceConfiguration.configurations.remove({
     $or: [{
       service: "facebook"
     }, {
+  /*
+      service: "github"
+    }, {
+  */
       service: "google"
     }, {
       service: "linkedin"
     }]
   });
 
-  /*
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "facebook",
@@ -36,14 +38,21 @@ Meteor.startup(function() {
     "clientId": "77pa4mwww7hvmw",
     "secret": "v7fYiQMLUwqGwQTI"
   });
-  */
 
+  /*
   // Local host versions...
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "facebook",
     "appId": "684907611568574",
     "secret": "12d420f0dc645f10fd65a53f6e2e49f9"
+  });
+
+  // Add GitHub configuration entry
+  ServiceConfiguration.configurations.insert({
+    "service": "github",
+    "clientId": "2ba59a4f980145c4adfb",
+    "secret": "6d2fca19cfc4ce612ce5f690f13770452df0d549"
   });
 
   // Add Google configuration entry
@@ -60,10 +69,6 @@ Meteor.startup(function() {
     "clientId": "77epi2jitxjgus",
     "secret": "lmHaFUApnO3gkxkm"
   });
-
-
-
-  Accounts.emailTemplates.siteName = "Kighe";
-  Accounts.emailTemplates.from = "Support <support@kighe.com>";
+  */
 });
 

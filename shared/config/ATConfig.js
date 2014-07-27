@@ -1,5 +1,3 @@
-/*
-AccountsTemplates.removeField('email');
 AccountsTemplates.addField({
     name: "username",
     type: "text",
@@ -7,24 +5,14 @@ AccountsTemplates.addField({
     required: true,
 });
 
+AccountsTemplates.removeField('email');
 AccountsTemplates.addField({
     name: 'email',
-    type: 'email',
-    required: false,
-    displayName: "email",
-    re: /.+@(.+){2,}\.(.+){2,}/,
-    errStr: 'error.accounts.Invalid email',
-});
-*/
-
-AccountsTemplates.removeField('login');
-AccountsTemplates.addField({
-    name: 'login',
     type: 'email',
     required: true,
     displayName: "email",
     re: /.+@(.+){2,}\.(.+){2,}/,
-    errStr: 'error.accounts.Invalid email',
+    errStr: 'Invalid email',
 });
 
 AccountsTemplates.removeField('password');
@@ -55,10 +43,11 @@ AccountsTemplates.addField({
 
 
 AccountsTemplates.configure({
-    showPlaceholders: true,
-    displayFormLabels: true,
+    confirmPassword: true,
     continuousValidation: true,
+    displayFormLabels: true,
     showAddRemoveServices: true,
+    showPlaceholders: true,
 
     postSignUpRoutePath: '/profile',
     //postSignInRoutePath: '/about',
