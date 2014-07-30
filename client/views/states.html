@@ -1,0 +1,30 @@
+
+<template name="states">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <div class="page-header">
+          <h1>accounts-templates <small>styled for <a href="http://getbootstrap.com/">Twitter Bootstrap</a></small></h1>
+        </div>
+        {{> states_options}}
+      </div>
+      <div id="signinFormDiv" class="col-sm-12 col-md-4">
+        {{> signinForm}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="states_options">
+  <div>
+    <h2>Lets play with internal states!</h2>
+    <p>
+      One single template, multiple faces...
+    </p>
+    <div class="btn-group">
+      {{#each states}}
+        <button type="button" class="btn btn-default {{active}}" id="{{this}}"> {{this}} </button>
+      {{/each}}
+    </div>
+  </div>
+</template>

@@ -32,6 +32,14 @@ Router.map(function() {
         }
     });
 
+    this.route('statesPage', {
+        path: '/states',
+        template: 'states',
+        onBeforeAction: function(){
+            AccountsTemplates.setState('sgin');
+        }
+    });
+
     this.route('aboutPage', {
         path: '/about',
         template: 'about',

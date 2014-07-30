@@ -46,6 +46,7 @@ AccountsTemplates.configure({
     confirmPassword: true,
     continuousValidation: true,
     displayFormLabels: true,
+    enablePasswordChange: true,
     showAddRemoveServices: true,
     showPlaceholders: true,
 
