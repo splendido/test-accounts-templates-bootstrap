@@ -3,6 +3,7 @@ AccountsTemplates.addField({
     type: "text",
     displayName: "Username",
     required: true,
+    minLength: 5,
 });
 
 AccountsTemplates.removeField('email');
@@ -12,7 +13,7 @@ AccountsTemplates.addField({
     required: true,
     displayName: "email",
     re: /.+@(.+){2,}\.(.+){2,}/,
-    errStr: 'Invalid email',
+    errStr: 'error.accounts.Invalid email',
 });
 
 AccountsTemplates.removeField('password');
@@ -29,8 +30,10 @@ AccountsTemplates.addField({
     name: 'name',
     type: 'text',
     displayName: "Full Name",
-    minLength: 5,
-    maxLength: 30,
+    //minLength: 5,
+    //maxLength: 30,
+    func: function(value){return value === 'Full Name';},
+    errStr: 'Only "Full Name" allowed!',
 });
 
 AccountsTemplates.addField({
@@ -51,11 +54,11 @@ AccountsTemplates.configure({
     showPlaceholders: true,
 
     postSignUpRoutePath: '/profile',
-    //postSignInRoutePath: '/about',
-    //signInRoutePath: '/signin',
-    //signInRouteName: 'signin',
-    //signUpRoutePath: '/signup',
-    //signUpRouteName: 'signup',
+    postSignInRoutePath: '/about',
+    signInRoutePath: '/signin',
+    signInRouteName: 'signin',
+    signUpRoutePath: '/signup',
+    signUpRouteName: 'signup',
     forgotPwdRoutePath: '/forgotpassword',
 });
 
