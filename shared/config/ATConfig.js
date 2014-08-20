@@ -1,7 +1,7 @@
 AccountsTemplates.addField({
     name: "username",
     type: "text",
-    displayName: "Username",
+    displayName: "username",
     required: true,
     minLength: 5,
 });
@@ -52,14 +52,60 @@ AccountsTemplates.configure({
     enablePasswordChange: true,
     showAddRemoveServices: true,
     showPlaceholders: true,
+    privacyUrl: '/privacyPolicy',
+    termsUrl: '/termsOfUse',
+});
 
-    postSignUpRoutePath: '/profile',
-    postSignInRoutePath: '/about',
-    signInRoutePath: '/signin',
-    signInRouteName: 'signin',
-    signUpRoutePath: '/signup',
-    signUpRouteName: 'signup',
-    forgotPwdRoutePath: '/forgotpassword',
+AccountsTemplates.configureRoute('signIn', {
+    name: 'signin',
+    path: '/signin',
+    redirect: '/about',
+});
+
+AccountsTemplates.configureRoute('signUp', {
+    name: 'signup',
+    path: '/signup',
+    redirect: '/profile',
+});
+
+AccountsTemplates.configureRoute('changePwd');
+
+AccountsTemplates.configureRoute('forgotPwd', {
+    path: '/forgotpassword',
 });
 
 AccountsTemplates.init();
+
+
+if (Meteor.isServer){
+
+    Accounts.validateLoginAttempt(function(attempt){
+        if (attempt.error){
+            var reason = attempt.error.reason;
+            if (reason === "User not found" || reason === "Incorrect password")
+                throw new Meteor.Error(403, "Login forbidden");
+        }
+        return attempt.allowed;
+    });
+
+    Accounts.validateLoginAttempt(function(attempt){
+        if (!attempt.allowed)
+            return false;
+        // Possibly denies the access...
+        if (attempt.user && attempt.user.failedLogins >= 2) // CHANGE ME!
+            throw new Meteor.Error(403, "Account locked!");
+        return true;
+    });
+
+    Accounts.onLogin(function(attempt){
+        // Resets the number of failed login attempts
+        Meteor.users.update(attempt.user._id, {$set: {failedLogins: 0}});
+    });
+
+    Accounts.onLoginFailure(function(attempt){
+        if (attempt.user && attempt.error.reason === "Login forbidden") {
+            // Increments the number of failed login attempts
+            Meteor.users.update(attempt.user._id, {$inc: {failedLogins: 1}});
+        }
+    });
+}

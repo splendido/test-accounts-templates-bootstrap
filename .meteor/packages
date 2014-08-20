@@ -9,6 +9,6 @@ less-fontawesome-4
 standard-app-packages
 bootstrap3-less
 accounts-google
-accounts-password
 accounts-facebook
 accounts-linkedin
+accounts-password
