@@ -69,6 +69,8 @@ AccountsTemplates.configureRoute('signUp', {
 });
 
 AccountsTemplates.configureRoute('changePwd');
+AccountsTemplates.configureRoute('resetPwd');
+AccountsTemplates.configureRoute('enrollAccount');
 
 AccountsTemplates.configureRoute('forgotPwd', {
     path: '/forgotpassword',
@@ -108,4 +110,6 @@ if (Meteor.isServer){
             Meteor.users.update(attempt.user._id, {$inc: {failedLogins: 1}});
         }
     });
+
+    Accounts.config({sendVerificationEmail: true});
 }
