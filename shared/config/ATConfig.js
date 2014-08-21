@@ -67,14 +67,14 @@ AccountsTemplates.configureRoute('signUp', {
     path: '/signup',
     redirect: '/profile',
 });
+AccountsTemplates.configureRoute('forgotPwd', {
+    path: '/forgotpassword',
+});
 
 AccountsTemplates.configureRoute('changePwd');
 AccountsTemplates.configureRoute('resetPwd');
 AccountsTemplates.configureRoute('enrollAccount');
 
-AccountsTemplates.configureRoute('forgotPwd', {
-    path: '/forgotpassword',
-});
 
 AccountsTemplates.init();
 

@@ -9,7 +9,7 @@ Template.options.helpers({
         return options;
     },
     signup: function() {
-        return AccountsTemplates.getState() === 'sgup';
+        return AccountsTemplates.getState() === 'signUp';
     },
 });
 
@@ -24,7 +24,9 @@ Template.option.events({
         var currTarg = event.currentTarget;
         var option = currTarg.id.slice(7); // Skips 'option-'
         AccountsTemplates._config[option] = !AccountsTemplates.getConfig(option);
+        AccountsTemplates._initialized = false;
+        AccountsTemplates.init();
         $('div.at').remove();
-        UI.insert(UI.render(Template.signinForm), $('#signinFormDiv').get(0));
+        UI.insert(UI.render(Template.atForm), $('#atFormDiv').get(0));
     }
 });

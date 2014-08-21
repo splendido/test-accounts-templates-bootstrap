@@ -1,16 +1,12 @@
 <template name="options">
   <div>
     <h2>Lets play with the configuration options!</h2>
-    <div class="alert alert-warning">Note: here I'm playing with UI.render and UI.insert to update the signinForm template when configuration options are modified. Acually there is no reactivity involved and the server-side configuration object remains unchanged!</div>
+    <div class="alert alert-warning">Note: here I'm playing with UI.render and UI.insert to update the atForm template when configuration options are modified. Acually there is no reactivity involved and the server-side configuration object remains unchanged!</div>
     <form role="form" class="well">
       {{#each options}}
         {{> option}}
       {{/each}}
     </form>
-    <div class="alert alert-warning">
-      Note: having feedback without labels shows some problems with icon vertical alignment (seems a bug in v3.1, see
-      <a href="https://github.com/twbs/bootstrap/issues/12873">here</a>)
-    </div>
   </div>
 
   {{#if signup}}
