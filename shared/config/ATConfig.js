@@ -50,6 +50,8 @@ AccountsTemplates.configure({
     continuousValidation: true,
     displayFormLabels: true,
     enablePasswordChange: true,
+    overrideLoginErrors: true,
+    sendVerificationEmail: true,
     showAddRemoveServices: true,
     showPlaceholders: true,
     privacyUrl: '/privacyPolicy',
@@ -79,6 +81,7 @@ AccountsTemplates.configureRoute('enrollAccount');
 AccountsTemplates.init();
 
 
+/*
 if (Meteor.isServer){
 
     Accounts.validateLoginAttempt(function(attempt){
@@ -113,3 +116,4 @@ if (Meteor.isServer){
 
     Accounts.config({sendVerificationEmail: true});
 }
+*/
