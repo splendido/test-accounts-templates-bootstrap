@@ -22,4 +22,8 @@ Template.nav.events({
         var lang = currTarg.id.slice(5); // Skips 'lang-'
         T9n.setLanguage(lang);
     },
+    'click #signOut': function(event){
+        event.preventDefault();
+        Meteor.logout();
+    },
 });
