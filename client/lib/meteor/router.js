@@ -44,6 +44,15 @@ Router.map(function() {
         template: 'profile',
     });
 
+    this.route('statesPage', {
+        path: '/states',
+        template: 'states',
+        onBeforeAction: function(){
+            AccountsTemplates.setState('signIn');
+            AccountsTemplates.clearFieldErrors();
+        }
+    });
+
     this.route('loginNeeded', {
         path: '/loginNeeded',
         template: 'loginNeeded',
