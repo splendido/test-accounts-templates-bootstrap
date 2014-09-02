@@ -1,8 +1,9 @@
 {
   "packages": {
     "less-fontawesome-4": {},
-    "accounts-templates-bootstrap": "0.0.20",
+    "accounts-templates-bootstrap": "0.0.22",
     "accounts-linkedin": {},
-    "bootstrap3-less": {}
+    "bootstrap3-less": {},
+    "accounts-meld": {}
   }
 }

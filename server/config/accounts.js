@@ -17,6 +17,7 @@ Meteor.startup(function() {
     }]
   });
 
+  
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "facebook",
