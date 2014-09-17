@@ -2,6 +2,9 @@
   <div>
     <h2>Lets play with the configuration options!</h2>
     <div class="alert alert-warning">Note: here I'm playing with UI.render and UI.insert to update the atForm template when configuration options are modified. Acually there is no reactivity involved and the server-side configuration object remains unchanged!</div>
+    <div class="alert alert-danger">
+      Changing some of the options influencing behaviour has no effect because they'd need a server restart to take over the default behaviour. But you can play with them cloning the repository for this demo app locally on your computer!
+    </div>
     <form role="form" class="well">
       {{#each options}}
         {{> option}}

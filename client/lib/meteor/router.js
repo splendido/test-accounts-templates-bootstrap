@@ -21,7 +21,7 @@ Router.map(function() {
         template: 'homeMain',
         onBeforeAction: function(){
             AccountsTemplates.setState('signIn');
-            AccountsTemplates.clearFieldErrors();
+            AccountsTemplates.clearState();
         }
     });
 
@@ -30,7 +30,7 @@ Router.map(function() {
         template: 'fullPage',
         onBeforeAction: function(){
             AccountsTemplates.setState('signIn');
-            AccountsTemplates.clearFieldErrors();
+            AccountsTemplates.clearState();
         }
     });
 
@@ -49,7 +49,7 @@ Router.map(function() {
         template: 'states',
         onBeforeAction: function(){
             AccountsTemplates.setState('signIn');
-            AccountsTemplates.clearFieldErrors();
+            AccountsTemplates.clearState();
         }
     });
 

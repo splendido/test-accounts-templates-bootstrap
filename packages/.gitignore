@@ -1,14 +1,13 @@
 /less-fontawesome-4
-/accounts-templates-core
 /accounts-templates-bootstrap
 /accounts-linkedin
 /bootstrap3-less
+/accounts-meld
+/accounts-templates-core
+/linkedin
 /accounts-t9n
 /iron-router
-/linkedin
 /iron-layout
 /blaze-layout
 /iron-core
 /iron-dynamic-template
-/underscore-string
-/accounts-meld

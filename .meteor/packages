@@ -11,5 +11,7 @@ bootstrap3-less
 accounts-google
 accounts-facebook
 accounts-linkedin
-accounts-password
 accounts-meld
+accounts-t9n
+service-configuration
+accounts-password
