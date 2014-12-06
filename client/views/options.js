@@ -34,7 +34,6 @@ Template.option.events({
         fields = _.reject(fields, function(field){
             return field._id === "password_again" || field._id === "new_password_again";
         });
-        console.dir(fields); 
         AccountsTemplates._fields = fields;
         AccountsTemplates.init();
         $('div.at-form').remove();
